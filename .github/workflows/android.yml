@@ -36,7 +36,7 @@ jobs:
             -Dnouveau=disabled \
             -Dvmwgfx=disabled \
             -Dvc4=disabled \
-            -Detnaviv=disabled \
+            -Detnaviv=disabled 
           ninja -C "build-android" install
           cd ..
           envsubst <android-${{matrix.arch}} >build-crossfile
