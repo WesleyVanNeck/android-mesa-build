@@ -35,10 +35,8 @@ jobs:
             -Damdgpu=disabled \
             -Dnouveau=disabled \
             -Dvmwgfx=disabled \
-            -Dfreedreno=enabled \
             -Dvc4=disabled \
             -Detnaviv=disabled \
-            -Dfreedreno-kgsl=true
           ninja -C "build-android" install
           cd ..
           envsubst <android-${{matrix.arch}} >build-crossfile
@@ -60,8 +58,7 @@ jobs:
             -Dopengl=true \
             -Dosmesa=true \
             -Dvulkan-drivers= \
-            -Dgallium-drivers=freedreno,zink \
-            -Dfreedreno-kmds=kgsl \
+            -Dgallium-drivers=virgl \
             -Dshared-glapi=false \
             -Dbuildtype=release
           ninja -C "build-android" install
