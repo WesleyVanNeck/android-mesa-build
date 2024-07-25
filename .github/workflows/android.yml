@@ -61,7 +61,7 @@ jobs:
             -Dllvm=disabled \
             -Dopengl=true \
             -Dosmesa=true \
-            -Dvulkan-drivers= \
+            -Dvulkan-drivers=virtio \
             -Dgallium-drivers=virgl \
             -Dfreedreno-kmds=kgsl,msm \
             -Dshared-glapi=false \
