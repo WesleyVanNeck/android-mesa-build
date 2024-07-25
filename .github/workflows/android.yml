@@ -1,7 +1,7 @@
 name: Build Android
 
 on:
-  workflow_dispatch:
+  push:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
@@ -62,7 +62,7 @@ jobs:
             -Dopengl=true \
             -Dosmesa=true \
             -Dvulkan-drivers= \
-            -Dgallium-drivers=freedreno,zink \
+            -Dgallium-drivers=virgl \
             -Dfreedreno-kmds=kgsl,msm \
             -Dshared-glapi=false \
             -Dbuildtype=release
